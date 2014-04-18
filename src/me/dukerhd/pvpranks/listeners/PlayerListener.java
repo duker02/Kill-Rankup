@@ -31,7 +31,7 @@ public class PlayerListener implements Listener {
 					if (plugin.getConfig().getInt("ranks." + s + ".kills") == getKills(k)) {
 						int kills = plugin.getConfig().getInt("ranks." + s + ".kills");
 						PvPRanks.perms.playerAddGroup(k, s);
-						k.sendMessage(plugin.getPrefix() + plugin.getMessage().replace("%kills%", Integer.toString(kills)).replace("%rank%", s));
+						if (plugin.getConfig().getBoolean("ranks." + s + ".message")) k.sendMessage(plugin.getPrefix() + plugin.getMessage().replace("%kills%", Integer.toString(kills)).replace("%rank%", s));
 					}
 				}
 			}
