@@ -1,0 +1,6 @@
+name: PvP-Ranks
+version: 1.0
+main: me.dukerhd.pvpranks.PvPRanks
+author: DukerHD
+description: Earn ranks in game by killing players.
+depend: [Vault]

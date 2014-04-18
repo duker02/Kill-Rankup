@@ -1,0 +1,16 @@
+messages:
+  prefix: '&7[&aPvP-Ranks&7]&c '   # Leave blank for none.
+  congratulations: 'You''ve earned &6%rank%&c for getting &6%kills%&c kills!'
+
+ranks:
+  Fighter:    # The rank to rank up to.
+    kills: 10   # How many kills do they need to have?
+    message: true   # Should the congrats message be sent?
+  Boss:
+    kills: 20
+    message: true
+
+players:
+  a4fae72bfe004cde93544708b4e8746e:
+    name: DukerHD
+    kills: 0
