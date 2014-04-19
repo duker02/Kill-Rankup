@@ -1,6 +1,6 @@
-name: PvP-Ranks
+name: KillRankup
 version: 1.0
-main: me.dukerhd.pvpranks.PvPRanks
+main: me.dukerhd.killrankup.KillRankup
 author: DukerHD
 description: Earn ranks in game by killing players.
 depend: [Vault]

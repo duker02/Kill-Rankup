@@ -1,5 +1,5 @@
 messages:
-  prefix: '&7[&aPvP-Ranks&7]&c '   # Leave blank for none.
+  prefix: '&7[&aKillRankup&7]&c '   # Leave blank for none.
   congratulations: 'You''ve earned &6%rank%&c for getting &6%kills%&c kills!'
 
 ranks:

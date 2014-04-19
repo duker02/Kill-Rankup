@@ -1,6 +1,6 @@
-package me.dukerhd.pvpranks.listeners;
+package me.dukerhd.killrankup.listeners;
 
-import me.dukerhd.pvpranks.PvPRanks;
+import me.dukerhd.killrankup.KillRankup;
 
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
@@ -11,7 +11,7 @@ import org.bukkit.event.player.PlayerJoinEvent;
 
 public class PlayerListener implements Listener {
 	
-	private PvPRanks plugin = PvPRanks.getInstance();
+	private KillRankup plugin = KillRankup.getInstance();
 	
 	@EventHandler
 	public void onPlayerJoin(PlayerJoinEvent e) {
@@ -30,7 +30,7 @@ public class PlayerListener implements Listener {
 				for (String s : plugin.getConfig().getConfigurationSection("ranks").getKeys(false)) {
 					if (plugin.getConfig().getInt("ranks." + s + ".kills") == getKills(k)) {
 						int kills = plugin.getConfig().getInt("ranks." + s + ".kills");
-						PvPRanks.perms.playerAddGroup(k, s);
+						KillRankup.perms.playerAddGroup(k, s);
 						if (plugin.getConfig().getBoolean("ranks." + s + ".message")) k.sendMessage(plugin.getPrefix() + plugin.getMessage().replace("%kills%", Integer.toString(kills)).replace("%rank%", s));
 					}
 				}
