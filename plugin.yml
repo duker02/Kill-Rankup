@@ -1,6 +1,6 @@
 name: KillRankup
-version: 1.0
+version: 1.5
 main: me.dukerhd.killrankup.KillRankup
 author: DukerHD
-description: Earn ranks in game by killing players.
+description: Earn ranks in game by killing things.
 depend: [Vault]

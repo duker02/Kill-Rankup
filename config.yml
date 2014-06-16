@@ -1,16 +1,44 @@
+version: 1.5    # Do not touch this! It will break the config.
+
 messages:
-  prefix: '&7[&aKillRankup&7]&c '   # Leave blank for none.
+  prefix: '&7[&aKillRankup&7]&c '    # Leave blank for none.
   congratulations: 'You''ve earned &6%rank%&c for getting &6%kills%&c kills!'
 
 ranks:
   Fighter:    # The rank to rank up to.
-    kills: 10   # How many kills do they need to have?
-    message: true   # Should the congrats message be sent?
+    kills: 10    # How many kills do they need to have?
+    message: true    # Should the congrats message be sent?
   Boss:
     kills: 20
     message: true
 
+# Boosting is killing the same player in a row
+boosting-protection:    # Only affective on player killing
+  enabled: true    # Self-explanatory
+  kills: 3    # At how many kills will the protection start?
+
+entities:    # What entity should be counted as a kill?
+  players: true
+  zombies: false
+  skeletons: false
+  creepers: false
+  spiders: false
+  iron-golems: false
+  cave-spiders: false
+  bats: false
+  silverfish: false
+  slimes: false
+  witches: false
+  pig-zombies: false
+  blazes: false
+  ghasts: false
+  magma-cubes: false
+  withers: false
+  giant-zombies: false
+  enderdragons: false
+  animals: false
+
 players:
-  a4fae72bfe004cde93544708b4e8746e:
-    name: DukerHD
-    kills: 0
+  this-uuid-is-for-testing:    # Player UUID
+    name: DukerHD    # Player username, for searching config
+    kills: 0    # Amount of kills the player has

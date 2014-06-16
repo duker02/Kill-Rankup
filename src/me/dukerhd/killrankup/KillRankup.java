@@ -24,6 +24,32 @@ public class KillRankup extends JavaPlugin {
 			return;
 		}
 		saveDefaultConfig();
+		if (!getConfig().getString("version").equals(getDescription().getVersion())) {
+			getConfig().set("version", getDescription().getVersion());
+			getConfig().set("entities.players", true);
+			getConfig().set("entities.zombies", false);
+			getConfig().set("entities.skeletons", false);
+			getConfig().set("entities.creepers", false);
+			getConfig().set("entities.spiders", false);
+			getConfig().set("entities.iron-golems", false);
+			getConfig().set("entities.cave-spiders", false);
+			getConfig().set("entities.bats", false);
+			getConfig().set("entities.silverfish", false);
+			getConfig().set("entities.slimes", false);
+			getConfig().set("entities.witches", false);
+			getConfig().set("entities.pig-zombies", false);
+			getConfig().set("entities.blazes", false);
+			getConfig().set("entities.ghasts", false);
+			getConfig().set("entities.magma-cubes", false);
+			getConfig().set("entities.withers", false);
+			getConfig().set("entities.giant-zombies", false);
+			getConfig().set("entities.enderdragons", false);
+			getConfig().set("entities.animals", false);
+			saveConfig();
+		} else if (getConfig().getString("version").equals(null)) {
+			getConfig().set("version", getDescription().getVersion());
+			saveConfig();
+		}
 		getServer().getPluginManager().registerEvents(new PlayerListener(), this);
 		prefix = ChatColor.translateAlternateColorCodes('&', getConfig().getString("messages.prefix"));
 		congratulations_message = ChatColor.translateAlternateColorCodes('&', getConfig().getString("messages.congratulations"));
